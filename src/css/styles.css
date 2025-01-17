@@ -11,24 +11,53 @@ header {
 }
 
 h1 {
-    font-size: 2.5em;
-    font-weight: bold;
+    font-family: "Playwrite VN", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3.5em;
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    color: #4a90e2;
+    text-shadow: 3px 3px 0 #ffd93d,
+                 6px 6px 0 rgba(74, 144, 226, 0.1);
+    letter-spacing: 2px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+h1:after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #ffd93d, transparent);
+}
+
+h1:hover {
+    transform: translateY(-2px);
+    text-shadow: 4px 4px 0 #ffd1dc,
+                 8px 8px 0 rgba(255, 105, 180, 0.1);
 }
 
 h2 {
-    font-size: 1.5em;
+    font-size: 1.6em;
     text-align: center;
-    margin-top: 0;
+    margin-top: 5px;
     color: #666;
+    font-weight: 500;
+    letter-spacing: 1px;
 }
 
 .container {
     display: flex;
-    gap: 20px;
+    gap: 25px;
     max-width: 1400px;
     margin: 0 auto;
+    padding: 10px;
 }
 
 .left-column, .right-column {
@@ -39,10 +68,17 @@ h2 {
 }
 
 .section {
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    border: 2px solid #4a90e2;
+    border-radius: 15px;
     padding: 15px;
     background-color: #fff;
+    box-shadow: 3px 3px 0 #ffd93d;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.section:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 5px 5px 0 #ffd93d;
 }
 
 .priorities, .todo-list, .schedule, .notes {
@@ -56,6 +92,15 @@ input[type="text"], input[type="checkbox"] {
 textarea {
     width: 100%;
     resize: vertical;
+    border: 2px solid #4a90e2;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+}
+
+textarea:focus {
+    border-color: #ff69b4;
+    outline: none;
+    box-shadow: 2px 2px 0 #ffd93d;
 }
 
 .line {
@@ -92,18 +137,32 @@ textarea {
 .schedule-input {
     flex: 1;
     padding: 4px 8px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
+    border: 2px solid #4a90e2;
+    border-radius: 5px;
     font-size: 0.9em;
+    transition: border-color 0.3s;
+}
+
+.schedule-input:focus {
+    border-color: #ff69b4;
+    outline: none;
+    box-shadow: 2px 2px 0 #ffd93d;
 }
 
 .priority-input {
     width: 90%;
     padding: 4px 8px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
+    border: 2px solid #4a90e2;
+    border-radius: 5px;
     font-size: 0.9em;
     margin: 2px 0;
+    transition: border-color 0.3s;
+}
+
+.priority-input:focus {
+    border-color: #ff69b4;
+    outline: none;
+    box-shadow: 2px 2px 0 #ffd93d;
 }
 
 ol {
@@ -147,15 +206,19 @@ li {
 
 .add-task button {
     padding: 8px 15px;
-    background-color: #4CAF50;
+    background-color: #4a90e2;
     color: white;
-    border: none;
+    border: 2px solid #4a90e2;
     border-radius: 3px;
     cursor: pointer;
+    box-shadow: 2px 2px 0 #ffd93d;
+    transition: all 0.2s;
 }
 
 .add-task button:hover {
-    background-color: #45a049;
+    background-color: #357abd;
+    transform: translate(-1px, -1px);
+    box-shadow: 3px 3px 0 #ffd93d;
 }
 
 .schedule.section {
@@ -183,4 +246,68 @@ li {
 
 .timeline::-webkit-scrollbar-thumb:hover {
     background: #555;
+}
+
+.delete-btn {
+    background: none;
+    border: none;
+    color: #ff69b4;
+    font-size: 1.2em;
+    cursor: pointer;
+    padding: 0 5px;
+    margin-left: auto;
+    opacity: 0.7;
+}
+
+.delete-btn:hover {
+    opacity: 1;
+}
+
+#task-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+footer {
+    margin-top: 40px;
+    padding: 20px 0;
+    background-color: #fff;
+    border: 2px solid #4a90e2;
+    box-shadow: 3px 3px 0 #ffd93d;
+    border-radius: 15px;
+}
+
+.footer-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-links a {
+    color: #4a90e2;
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: color 0.3s ease;
+    font-weight: bold;
+}
+
+.footer-links a:hover {
+    color: #ff69b4;
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
 }

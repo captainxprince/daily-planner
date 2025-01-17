@@ -48,7 +48,11 @@ function loadTasks() {
     taskList.innerHTML = '';
     tasks.forEach(task => {
         const li = document.createElement('li');
-        li.innerHTML = `<input type="checkbox" ${task.checked ? 'checked' : ''}> <span>${task.text}</span>`;
+        li.innerHTML = `
+            <input type="checkbox" ${task.checked ? 'checked' : ''}> 
+            <span>${task.text}</span>
+            <button class="delete-btn" onclick="deleteTask(this)">×</button>
+        `;
         taskList.appendChild(li);
     });
 }
@@ -90,11 +94,22 @@ function addTask() {
     
     if (input.value.trim() !== '') {
         const li = document.createElement('li');
-        li.innerHTML = `<input type="checkbox"> <span>${input.value}</span>`;
+        li.innerHTML = `
+            <input type="checkbox"> 
+            <span>${input.value}</span>
+            <button class="delete-btn" onclick="deleteTask(this)">×</button>
+        `;
         taskList.appendChild(li);
         input.value = '';
         saveTasks();
     }
+}
+
+// Add new delete function
+function deleteTask(button) {
+    const li = button.parentElement;
+    li.remove();
+    saveTasks();
 }
 
 // Add event listeners
