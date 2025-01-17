@@ -30,10 +30,6 @@ daily-planner
    ```
    cd daily-planner
    ```
-3. Install the dependencies:
-   ```
-   npm install
-   ```
 
 ### Usage
 - Open `src/index.html` in your web browser to view the Daily Planner UI.
