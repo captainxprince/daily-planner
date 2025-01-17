@@ -1,0 +1,17 @@
+{
+  "name": "daily-planner",
+  "version": "1.0.0",
+  "description": "A simple Daily Planner UI with sections for priorities, to-do list, schedule, and notes.",
+  "main": "src/index.html",
+  "scripts": {
+    "start": "live-server src"
+  },
+  "keywords": [
+    "daily-planner",
+    "ui",
+    "html",
+    "css"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
+}

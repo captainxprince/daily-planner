@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <title>Daily Planner</title>
+</head>
+<body>
+    <header>
+        <h1>Daily Planner❤️</h1>
+        <h2 id="current-date">Monday, January 1, 2024</h2>
+    </header>
+    <main class="container">
+        <div class="left-column">
+            <section class="priorities section">
+                <h3>Priorities</h3>
+                <ol>
+                    <li><input type="text" class="priority-input"></li>
+                    <li><input type="text" class="priority-input"></li>
+                    <li><input type="text" class="priority-input"></li>
+                    <li><input type="text" class="priority-input"></li>
+                    <li><input type="text" class="priority-input"></li>
+                    <li><input type="text" class="priority-input"></li>
+                    <li><input type="text" class="priority-input"></li>
+                    <li><input type="text" class="priority-input"></li>
+                </ol>
+            </section>
+            <section class="todo-list section">
+                <h3>To-Do List</h3>
+                <div class="add-task">
+                    <input type="text" id="new-task" placeholder="Enter new task...">
+                    <button onclick="addTask()">Add</button>
+                </div>
+                <ul id="task-list">
+                    <!-- Tasks will be added here dynamically -->
+                </ul>
+            </section>
+        </div>
+        <div class="right-column">
+            <section class="schedule section">
+                <h3>Schedule</h3>
+                <div class="timeline">
+                    <div class="time-block">
+                        <div class="time">5 AM</div>
+                        <input type="text" class="schedule-input">
+                    </div>
+                    <div class="time-block">
+                        <div class="time">6 AM</div>
+                        <input type="text" class="schedule-input">
+                    </div>
+                    <div class="time-block">
+                        <div class="time">7 AM</div>
+                        <input type="text" class="schedule-input">
+                    </div>
+                    <div class="time-block">
+                        <div class="time">8 AM</div>
+                        <input type="text" class="schedule-input">
+                    </div>
+                    <div class="time-block">
+                        <div class="time">9 AM</div>
+                        <input type="text" class="schedule-input">
+                    </div>
+                    <div class="time-block">
+                        <div class="time">10 AM</div>
+                        <input type="text" class="schedule-input">
+                    </div>
+                    <div class="time-block">
+                        <div class="time">11 AM</div>
+                        <input type="text" class="schedule-input">
+                    </div>
+                    <div class="time-block">
+                        <div class="time">12 PM</div>
+                        <input type="text" class="schedule-input">
+                    </div>
+                    <div class="time-block">
+                        <div class="time">1 PM</div>
+                        <input type="text" class="schedule-input">
+                    </div>
+                    <div class="time-block">
+                        <div class="time">2 PM</div>
+                        <input type="text" class="schedule-input">
+                    </div>
+                    <div class="time-block">
+                        <div class="time">3 PM</div>
+                        <input type="text" class="schedule-input">
+                    </div>
+                    <div class="time-block">
+                        <div class="time">4 PM</div>
+                        <input type="text" class="schedule-input">
+                    </div>
+                    <div class="time-block">
+                        <div class="time">5 PM</div>
+                        <input type="text" class="schedule-input">
+                    </div>
+                    <div class="time-block">
+                        <div class="time">6 PM</div>
+                        <input type="text" class="schedule-input">
+                    </div>
+                    <div class="time-block">
+                        <div class="time">7 PM</div>
+                        <input type="text" class="schedule-input">
+                    </div>
+                    <div class="time-block">
+                        <div class="time">8 PM</div>
+                        <input type="text" class="schedule-input">
+                    </div> <div class="time-block">
+                        <div class="time">9 PM</div>
+                        <input type="text" class="schedule-input">
+                    </div> <div class="time-block">
+                        <div class="time">10 PM</div>
+                        <input type="text" class="schedule-input">
+                    </div> <div class="time-block">
+                        <div class="time">11 PM</div>
+                        <input type="text" class="schedule-input">
+                    </div>
+                    <div class="time-block">
+                        <div class="time">12 AM</div>
+                        <input type="text" class="schedule-input">
+                    </div>
+                </div>
+            </section>
+            <section class="notes section">
+                <h3>Notes</h3>
+                <textarea rows="10" placeholder="Write your notes here..."></textarea>
+            </section>
+        </div>
+    </main>
+    <script src="js/app.js"></script>
+</body>
+</html>
